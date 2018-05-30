@@ -79,7 +79,7 @@
     <!-- Import CSS -->
     
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?yz9LfSb9uf0Ih9JGhBSXTg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
 
@@ -286,7 +286,8 @@
                     
 
                     <!-- Index Module 首页主要内容在这里 -->
-<div class="material-index mdl-grid">
+<link rel="stylesheet" href="https://cdn.bootcss.com/mdui/0.4.1/css/mdui.css" />
+<div class="material-index mdl-grid mdui-drawer-body-left">
     
     <div class="locate-thumbnail-symbol"></div>
 
@@ -503,7 +504,7 @@
 
                     
                         <!-- Overlay For Active Sidebar 遮罩层 -->
-<div class="sidebar-overlay"></div> 
+<!-- <div class="sidebar-overlay"></div>  -->
 
 <!-- Material sidebar -->
 <aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
@@ -832,7 +833,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+    <script>lsloader.load("js_js","/js/js.min.js?VPbH30CIgb+OAV9Xk7Dvfw==", true)</script>
 
 
 
@@ -931,6 +932,12 @@ It will not impact the appearance and can give developers a lot of support :)
             var item = scriptList[i];
             lsloader.runInlineScript(item.id,item.id);
         }
+
+        
+            
+        console.log("默认打开侧边栏");
+        var sidebar = $('#sidebar');
+        sidebar.toggleClass('open');
     })()
 console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
 </script>

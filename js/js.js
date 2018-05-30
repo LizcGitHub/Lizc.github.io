@@ -2170,26 +2170,38 @@ window.addEventListener("load", function() {
 
 $(document).ready(function() {
     var overlay = $('.sidebar-overlay');
+    
 
+    /* 侧边栏点击事件 */
     $('.sidebar-toggle').on('click', function() {
         var sidebar = $('#sidebar');
-        sidebar.toggleClass('open');
+
+        console.log("WTF");
+
         if (sidebar.hasClass('sidebar-fixed-left') && sidebar.hasClass('open')) {
             overlay.addClass('active');
             $('.MD-burger-layer').remove('MD-burger-line');
             $('.MD-burger-layer').add('MD-burger-arrow');
-      document.documentElement.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
         } else {
             overlay.removeClass('active');
             $('.MD-burger-layer').removeClass('MD-burger-arrow');
             $('.MD-burger-layer').addClass('MD-burger-line');
-      document.documentElement.style.overflow = "auto";
+            document.documentElement.style.overflow = "auto";
         }
+
+        // if (sidebar.hasClass('force_open')) {
+        // } else {
+            // sidebar.addClass('force_open');
+        // }  
     });
 
     overlay.on('click', function() {
         $(this).removeClass('active');
         $('#sidebar').removeClass('open');
+      
+        // $('#sidebar').removeClass('force_open');
+        
         $('.MD-burger-layer').removeClass('MD-burger-arrow');
         $('.MD-burger-layer').addClass('MD-burger-line');
     document.documentElement.style.overflow = "auto";

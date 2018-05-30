@@ -2159,8 +2159,10 @@ a {
 .sidebar.open {
     min-width: 280px;
     width: 280px;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0)
+    /* -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) */
+    -webkit-transform: none;
+    transform: none 
 }
 .sidebar-fixed-left {
     position: fixed;
@@ -2174,7 +2176,9 @@ a {
 @media (max-width: 840px) {
     .sidebar.open {
         min-width: 240px;
-        width: 240px
+        width: 240px;
+        -webkit-transform: none;
+        transform: none 
     }
     .sidebar .sidebar-header {
         height: 149.34px
@@ -2184,6 +2188,22 @@ a {
         height: 44px
     }
 }
+
+@media (min-width: 1440px) {  
+    .sidebar.open {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0) 
+        
+    }
+}
+
+@media (max-width: 1440px) {
+    .sidebar.open {
+        -webkit-transform: none;
+        transform: none 
+    }
+}
+
 #scheme-Paradox #sidebar-main {
     min-height: calc(100% - 100px);
     margin-bottom: 55px;
